@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap')
+$ftcolor:rgb(245, 245, 247)
+$sdcolor: rgb(34, 31, 32)
+
+*    
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Inter',sans-serif
+.title 
+    color:$sdcolor
+    font-size: 40px
+    font-weight: 400
+    text-align: center
+
+
+// header styles
+
+.header 
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    position: relative
+    width: 100%
+    min-height: 100vh
+    background: rgb(0,0 ,0 )
+    &_bg 
+        width: 100%
+        height: 100%
+        object-fit: cover
+        position: absolute
+        z-index: 0
+    .container
+        padding-top: 75px
+        position: relative
+        z-index: 9
+        text-align: left
+    &_subheader 
+        color: $ftcolor
+        font-weight: 400
+        font-size: 60px
+        text-align: left
+        text-transform: uppercase
+    &_subtitle
+        margin-top: 120px
+        letter-spacing: 2px 
+        color: $ftcolor
+        font-size: 32px
+        font-weight: 100
+    &_btn 
+        background: rgba(217, 217, 217, 0)
+        border: 1px solid $ftcolor
+        color: $ftcolor
+        width: 160px
+        height: 38px
+        font-size: 16px
+        font-weight: 300
+        letter-spacing: 1px
+        margin-top: 20px
+        transition: 0.3s ease
+        &:hover
+            background: $ftcolor
+            color: #000
+    &_address
+        position: relative
+        margin-top: 100px
+        span,&_link,&_phone
+            display: block
+            font-size: 16px
+            color: $ftcolor
+            text-decoration: none
+            font-weight: 100
+        &::before
+            content: ''
+            background: url('../img/Arrow.svg')
+            background-position: center
+            width: 40px
+            height: 49px
+            display: block
+            left: -45px
+            border: 1px dashed $ftcolor
+            position: absolute
+    &_navigation
+        position: relative
+        height: 23.6px
+        width: 100%
+        background: linear-gradient(180.00deg, rgba(255, 255, 255, 0.04),rgba(255, 255, 255, 0.12) 50%,rgba(255, 255, 255, 0.2) 100%)
+        .container-nav 
+            padding: 0 0
+        ul
+            display: flex
+            justify-content: space-between
+            align-items: center
+            list-style: none
+        li
+            a
+                font-size: 10px
+                font-weight: 100
+                color: $ftcolor
+                text-decoration: none
+
+
+// main
+
+main
+    background: $ftcolor
+    .about
+        padding: 80px 0
+        &_subheader
+            color:$sdcolor
+            font-size: 12px
+            font-weight: 400
+        &_title
+            margin-top: 20px
+            font-size: 40px
+            color: $sdcolor
+            font-weight: 400
+            text-align:left 
+            line-height: 48px
+            span
+               color:#A5A5A5
+        &_serv
+            margin-top: 80px
+            h5 
+                font-size: 16px
+                color: $sdcolor
+                font-weight: 400
+            &_title
+                display: flex
+                align-items: center
+                position: relative
+                font-size: 16px
+                font-weight: 400
+                color: $sdcolor
+                margin-top: 5px
+                &:nth-child(2)
+                    margin-top: 20px
+                    &::before 
+                        content: ''
+                        position: absolute
+                        background-image: url('../img/camera.svg')
+                        background-position: center center
+                        background-repeat: no-repeat
+                        display: block
+                        width: 15px
+                        height: 15px
+                        top: 4px
+                        left: -30px
+                &:nth-child(4)
+                    &::before 
+                        content: ''
+                        position: absolute
+                        background-image: url('../img/Edit.svg')
+                        background-position: center center
+                        background-repeat: no-repeat
+                        display: block
+                        width: 15px
+                        height: 15px
+                        top: 4px
+                        left: -30px
+            &_subtitle
+                margin-top: 0
+                width: 100%
+                font-size: 20px
+                letter-spacing: 2%
+                font-weight: 400
+                color: $sdcolor
+                line-height: 24px
+    .work
+        width: 100%
+        height: 100%
+        &_port
+            display: grid
+            grid-template-columns: repeat(2,1fr)
+            grid-template-rows: repeat(3,minmax(400px,auto)) 
+            margin-top: 50px
+            margin: 0
+            grid-gap: 20px
+            img
+                height: 100%
+                width: 100%
+    .inspir
+        width: 100%
+        margin-top: 80px
+        &_grid 
+            margin-top: 50
+            display: grid 
+            grid-template-columns: repeat(4, 1fr)
+            grid-template-rows: repeat(2, 230px)
+            gap: 10px 
+            img
+                height: 100%
+                width: 100%
+            &_img-4 
+                grid-column: 4
+                grid-row: 1 /  3
+            &_img-6 
+                height: 230px
+                grid-column: 2 / 4
+    .custom
+        &_title
+            gap: 15px
+            img
+                box-shadow: 7px 7px 12px 0px rgba(0, 0, 0, 0.25)
+                width: 100%
+
+.footer
+    width: 100%
+    display: flex
+    height: 200px
+    justify-content: space-around
+    align-items: center
+    background: rgb(0,0,0)
+    a
+        display: block
+        color: $ftcolor
+        text-decoration: none
+        font-size: 20px
+        font-weight: 400
+    &_media
+        display: flex
+        a
+            text-align: center
+            width: 32px
+            border: 1px solid rgba(255,255,255)
+            &:not(:last-child)
+                margin-right: 35px
+                
